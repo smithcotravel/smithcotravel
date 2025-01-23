@@ -9,7 +9,7 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #1E2A38, #3A506B);
+            background: #1E2A38;
             color: #F8F8FF;
         }
 
@@ -17,14 +17,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 50px;
+            padding: 15px 20px;
             background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
         }
 
         header .nav-links {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 15px;
         }
 
         header .nav-links li {
@@ -43,11 +47,13 @@
         }
 
         .hero {
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            height: 100vh;
+            color: #F8F8FF;
             padding: 0 20px;
         }
 
@@ -63,7 +69,7 @@
         }
 
         .cta-btn {
-            padding: 10px 30px;
+            padding: 10px 20px;
             background: #FF4500;
             color: #F8F8FF;
             text-decoration: none;
@@ -79,16 +85,16 @@
 
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.8);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 50px 20px;
+            background: #2A3B4C;
         }
 
         .features .feature {
             background: #1E2A38;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: center;
         }
 
@@ -104,8 +110,8 @@
 
         footer {
             text-align: center;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.8);
             color: #F8F8FF;
             font-size: 0.9rem;
         }
@@ -117,6 +123,46 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .cta-btn {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .cta-btn {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
@@ -135,7 +181,7 @@
         <div>
             <h1>Your Next Adventure Awaits</h1>
             <p>Explore the world with seamless and stress-free travel planning.</p>
-            <a href="#" class="cta-btn">Get Started</a>
+            <a href="#" class="cta-btn">Discover More</a>
         </div>
     </section>
 
