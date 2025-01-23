@@ -112,5 +112,19 @@
             <p>&copy; 2025 Smith & Co. Travel. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('nav-menu-visible');
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                navMenu.classList.remove('nav-menu-visible');
+            }
+        });
+    </script>
 </body>
 </html>
