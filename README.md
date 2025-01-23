@@ -1,0 +1,2 @@
+# smithcotravel
+ init website
