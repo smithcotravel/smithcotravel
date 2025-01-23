@@ -1,0 +1,250 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #0F172A;
+    color: #E2E8F0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background-color: #1E293B;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .logo img {
+    width: 140px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #E2E8F0;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    color: #3B82F6;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #1E293B;
+    color: #E2E8F0;
+    text-align: center;
+    padding: 100px 20px;
+    background-image: url('assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 span {
+    color: #3B82F6;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3B82F6;
+    color: #E2E8F0;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2563EB;
+}
+
+/* About Section */
+.about {
+    background-color: #0F172A;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    color: #3B82F6;
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #E2E8F0;
+    font-size: 18px;
+}
+
+/* Services Section */
+.services {
+    background-color: #1E293B;
+    padding: 60px 0;
+}
+
+.services .service-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.services .card {
+    background-color: #0F172A;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.services .card h3 {
+    color: #3B82F6;
+    margin-bottom: 15px;
+}
+
+.services .card p {
+    color: #E2E8F0;
+}
+
+/* Destinations Section */
+.destinations {
+    background-color: #0F172A;
+    padding: 60px 0;
+}
+
+.destinations .destination-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.destinations .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.destinations .card h3 {
+    color: #3B82F6;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #1E293B;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+    color: #3B82F6;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact .form-group {
+    margin-bottom: 20px;
+}
+
+.contact .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #E2E8F0;
+}
+
+.contact .form-group input, .contact .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+.contact button {
+    background-color: #3B82F6;
+    color: #E2E8F0;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact button:hover {
+    background-color: #2563EB;
+}
+
+/* Footer */
+.footer {
+    background-color: #0F172A;
+    text-align: center;
+    padding: 25px 0;
+    color: #E2E8F0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .services .service-cards,
+    .destinations .destination-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services .card,
+    .destinations .card {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+
+    .services .service-cards,
+    .destinations .destination-cards {
+        justify-content: space-between;
+    }
+}
